@@ -6,6 +6,7 @@ import numpy as np
 import nltk
 from nltk.stem import WordNetLemmatizer
 
+import tensorflow as tf
 from tensorflow.python.keras.models import Sequential
 from tensorflow.python.keras.layers import Dense, Dropout
 
@@ -14,7 +15,7 @@ from tensorflow.python.keras.layers import Dense, Dropout
 # To reduce words to its stems/lemmas in order to not lose on the performance
 lemmatizer = WordNetLemmatizer()
 
-# Load the data from statics file for training
+# Load the data for training
 data = json.loads(open("data.json").read())
 
 words = []
@@ -60,14 +61,23 @@ for document in documents:
 
 # Shuffle the data
 random.shuffle(training)
+training = np.array(training)
 
 # Part 3 - Building the Neural network
 train_x = list(training[:, 0])
 train_y = list(training[:, 1])
 
+# Adding layers
 model = Sequential()
 model.add(Dense(120, input_shape=(len(train_x[0]),), activation="relu"))
 model.add(Dropout(0.5))
-model.add(Dense(64,activation="relu"))
+model.add(Dense(64, activation="relu"))
 model.add(Dropout(0.5))
 model.add(Dense(len(train_y[0]), activation="softmax"))
+
+sgd = tf.keras.optimizers.SGD(learning_rate=0.01, momentum=0.9, nesterov=True)
+model.compile(loss="categorical_crossentropy", optimizer="sgd", metrics=["accuracy"])
+
+trained_model = model.fit(np.array(train_x), np.array(train_y), epochs=200, batch_size=5, verbose=1)
+model.save("chatbot.h5", trained_model)
+print("Done")
