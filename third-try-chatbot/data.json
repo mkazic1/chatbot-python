@@ -1,0 +1,128 @@
+{
+  "data": [
+    {
+      "tag": "greetings",
+      "patterns": [
+        "Hello",
+        "Hi",
+        "Good morning",
+        "Good evening",
+        "Good afternoon",
+        "Hy",
+        "Hey",
+        "Morning",
+        "Greetings",
+        "What's up"
+      ],
+      "responses": [
+        "Hello, how can I help you?",
+        "Hello!",
+        "Hey!",
+        "How can I help you?",
+        "Hello, welcome to Chatbot, how can I help you?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Goodbye",
+        "Bye",
+        "Have a nice day",
+        "See you later",
+        "Ciao",
+        "Have a good day"
+      ],
+      "responses": [
+        "Goodbye!",
+        "Hope to hear from you soon!",
+        "Bye!",
+        "Have a nice day!"
+      ]
+    },
+    {
+      "tag": "name",
+      "patterns": [
+        "Who are you",
+        "What's your name",
+        "Name"
+      ],
+      "responses": [
+        "I am and AI Chatbot Fifi!",
+        "My name is Fifi, nice to meet you!",
+        "Fifi is my name and I am an AI Chatbot!",
+        "Everyone calls me Fifi!"
+      ]
+    },
+    {
+      "tag": "age",
+      "patterns": [
+        "How old are you",
+        "Age",
+        "Are you old"
+      ],
+      "responses": [
+        "I don't have any age, I am an AI Chatbot, however I was first realised in March 2023.",
+        "I wasn't born, but I was first realised in March 2023."
+      ]
+    },
+    {
+      "tag": "devla",
+      "patterns": [
+        "Devla GMBH",
+        "What do you know about Devla Gmbh",
+        "Tell me something about Devla"
+      ],
+      "responses": [
+        "Devla Gmbh is a German company that specializes in software development, web2, web3, blockchain, metaverse and AI."
+      ]
+    },
+    {
+      "tag": "devla_offices",
+      "patterns": [
+        "Where is Devla located",
+        "How many offices of Devla is there",
+        "Where are the offices",
+        "Where is Devla"
+      ],
+      "responses": [
+        "Devla Gmbh has offices in Germany, Bosnia and Herzegowina and Croatia.",
+        "Devla is originally a german company with offices in three different countries like Germany, Bosnia and Herzegowina and Croatia.",
+        "Devla is located in three different offices in Stuttgart, Split and Sarajevo."
+      ]
+    },
+    {
+      "tag": "devla_name",
+      "patterns": [
+        "What does Devla mean",
+        "What is Devla"
+      ],
+      "responses": [
+        "Devla is the name of our company where dev is for development and la is for the initials of our CEO, so Dev-la.",
+        "Devla - dev for development and la for the initials of out CEO, so Dev-la."
+      ]
+    },
+    {
+      "tag": "devla_contact",
+      "patterns": [
+        "How can I contact Devla Gmbh?",
+        "Contact",
+        "More informations"
+      ],
+      "responses": [
+        "You can contact Devla Gmbh through their website, email. Visit their website devla.dev for more details.",
+        "You can contat Devla through website devla.dev or through email info@devla.dev."
+      ]
+    },
+    {
+      "tag": "devla_products",
+      "patterns": [
+        "What are the products of Devla Gmbh?",
+        "What are famous Devla Gmbh projects do far",
+        "Devla Gmbh projects"
+      ],
+      "responses": [
+         "Devla Gmbh as a company developed many projects and some of them are Ultron Foundation, Picamory, NewJoy, Payfoot for more informations please check out devla.dev website."
+      ]
+    }
+  ]
+}
